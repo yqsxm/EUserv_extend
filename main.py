@@ -132,8 +132,10 @@ if __name__ == "__main__":
                     print("ServerID: %s Renew Error!" % k)
                 else:
                     print("ServerID: %s has been successfully renewed!" % k)
+                    run: curl "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=德鸡ServerID: %s续签成功"
             else:
                 print("ServerID: %s does not need to be renewed" % k)
+                run: curl "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=德鸡ServerID: %s目前不需续签"
         time.sleep(15)
         check(sessid, s)
         time.sleep(5)
