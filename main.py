@@ -134,12 +134,10 @@ if __name__ == "__main__":
                     print("ServerID: %s Renew Error!" % k)
                 else:
                     print("ServerID: %s has been successfully renewed!" % k)
-                    curl -s --data chat_id="1231917560" --data "text=德鸡ServerID: %s续签成功." "https://api.telegram.org/bot1669178257:AAE8HSfUAmEBQli59vQPzz8Qw1cfaj6r7XQ/sendMessage"
 #                    curl -s --data chat_id="${{TELEGRAM_CHAT_ID }}" --data "text=德鸡ServerID: %s续签成功." "https://api.telegram.org/bot${{ TELEGRAM_BOT_TOKEN }}/sendMessage"
 #                    curl "https://api.telegram.org/bot${{ TELEGRAM_BOT_TOKEN }}/sendMessage" -d "chat_id=${{TELEGRAM_CHAT_ID }}&text=德鸡ServerID: %s续签成功"
             else:
                 print("ServerID: %s does not need to be renewed" % k)
-                curl -s --data chat_id="1231917560" --data "text=德鸡ServerID: %s目前不需续签." "https://api.telegram.org/bot1669178257:AAE8HSfUAmEBQli59vQPzz8Qw1cfaj6r7XQ/sendMessage"
 #                curl -s --data chat_id="${{TELEGRAM_CHAT_ID }}" --data "text=德鸡ServerID: %s目前不需续签." "https://api.telegram.org/bot${{ TELEGRAM_BOT_TOKEN }}/sendMessage"                           
 #                curl "https://api.telegram.org/bot${{TELEGRAM_BOT_TOKEN }}/sendMessage" -d "chat_id=${{TELEGRAM_CHAT_ID }}&text=德鸡ServerID: %s目前不需续签"
         time.sleep(15)
