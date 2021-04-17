@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup
 
 USERNAME = os.environ["USERNAME"]
 PASSWORD = os.environ["PASSWORD"]
-TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
-TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
+#TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
+#TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 PROXIES = {
     "http": "http://127.0.0.1:10809",
     "https": "http://127.0.0.1:10809"
