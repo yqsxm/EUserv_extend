@@ -12,7 +12,8 @@ PROXIES = {
     "http": "http://127.0.0.1:10809",
     "https": "http://127.0.0.1:10809"
 }
-
+bot = telegram.Bot(token=${{TELEGRAM_BOT_TOKEN }})
+bot.send_message(chat_id=${{TELEGRAM_CHAT_ID }}, text="test新消息")
 
 def login(username, password) -> (str, requests.session):
     headers = {
